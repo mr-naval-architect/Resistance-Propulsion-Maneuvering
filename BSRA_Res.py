@@ -203,7 +203,18 @@ CR_Cruising = 2.4938 * CRoundedCruising * LengthPP / (Volume**(1 / 3))
 
 TotalResBSRACruising = 5.045 * 10**(-3) * ((Displacement * SpeedCruisingMS**2) / LengthPP) * CR_Cruising
 
-print('Resistance at cruising speed by BSRA =', TotalResBSRACruising, '[kN]')
+#print('Resistance at cruising speed by BSRA =', TotalResBSRACruising, '[kN]')
+
+
+
+def EffectivePowerBSRACruising(SpeedCruisingMS, TotalResBSRACruising):
+    EffectivePowerBSRACruising = SpeedCruisingMS * TotalResBSRACruising
+    return EffectivePowerBSRACruising
+
+EffectivePowerBSRACruising = EffectivePowerBSRACruising(SpeedCruisingMS, TotalResBSRACruising)
+#print('Effective power at cruising speed by BSRA =', EffectivePowerBSRACruising, '[kW]')
+#print('')
+
 
 # ======================================================================================================================
 # BSRA - APPROXIMATE RESISTANCE AND POWER PREDICTION METHOD FOR A RANGE OF SPEEDS
@@ -327,7 +338,15 @@ while n < p:
 
     n += 1
 
-print('Resistance by BSRA =', TotalResBSRA, '[kN]')
+#print('Resistance by BSRA =', TotalResBSRA, '[kN]')
+
+
+def EffectivePowerBSRA(SpeedMS, TotalResBSRA):
+    EffectivePowerBSRA = SpeedMS * TotalResBSRA
+    return EffectivePowerBSRA
+
+EffectivePowerBSRA = EffectivePowerBSRA(SpeedMS, TotalResBSRA)
+#print('Effective power by BSRA =', EffectivePowerBSRA, '[kW]')
 
 
 #plt.plot(SpeedMS, TotalResBSRA)

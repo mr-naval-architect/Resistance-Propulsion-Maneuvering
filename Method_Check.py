@@ -235,7 +235,7 @@ def S60CheckDiagrams_1(LbyB, CB):
         else:
             S60_1_1 = False
 
-    print('S60 check 1 1 =', S60_1_1)
+    #print('S60 check 1 1 =', S60_1_1)
 
     if 6.5 <= LbyB < 7.5:
         if 0.6 <= CB <= 0.8:
@@ -243,7 +243,7 @@ def S60CheckDiagrams_1(LbyB, CB):
         else:
             S60_1_2 = False
 
-    print('S60 check 1 2 =', S60_1_2)
+    #print('S60 check 1 2 =', S60_1_2)
 
     if 7.5 <= LbyB <= 8.5:
         if 0.6 <= CB <= ((-0.2) * (LbyB) + 2.3):
@@ -251,7 +251,7 @@ def S60CheckDiagrams_1(LbyB, CB):
         else:
             S60_1_3 = False
 
-    print('S60 check 1 3 =', S60_1_3)
+    #print('S60 check 1 3 =', S60_1_3)
 
     if S60_1_1 == True or S60_1_2 == True or S60_1_3 == True:
         S60Diagrams_1 = True
@@ -262,7 +262,7 @@ def S60CheckDiagrams_1(LbyB, CB):
 
 S60Diagrams_1 = S60CheckDiagrams_1(LbyB, CB)
 
-print('S60 check 1 =', S60Diagrams_1)
+#print('S60 check 1 =', S60Diagrams_1)
 
 
 def S60CheckDiagrams_2(BbyT, CB):
@@ -276,7 +276,7 @@ def S60CheckDiagrams_2(BbyT, CB):
 
 S60Diagrams_2 = S60CheckDiagrams_2(BbyT, CB)
 
-print('S60 check 2 =', S60Diagrams_2)
+#print('S60 check 2 =', S60Diagrams_2)
 
 
 def S60CheckDiagrams_3(BbyT, LengthWL, Beam):
@@ -290,7 +290,7 @@ def S60CheckDiagrams_3(BbyT, LengthWL, Beam):
 
 S60Diagrams_3 = S60CheckDiagrams_3(BbyT, LengthWL, Beam)
 
-print('S60 check 3 =', S60Diagrams_3)
+#print('S60 check 3 =', S60Diagrams_3)
 
 
 def S60CheckDiagrams_4(LCB, CB):
@@ -351,7 +351,7 @@ def S60CheckDiagrams_4(LCB, CB):
 
 S60Diagrams_4 = S60CheckDiagrams_4(LCB, CB)
 
-print('S60 check 4 =', S60Diagrams_4)
+#print('S60 check 4 =', S60Diagrams_4)
 
 
 def S60CheckDiagrams_5(LCB, LbyB):
@@ -400,7 +400,7 @@ def S60CheckDiagrams_5(LCB, LbyB):
 
 S60Diagrams_5 = S60CheckDiagrams_5(LCB, LbyB)
 
-print('S60 check 5 =', S60Diagrams_5)
+#print('S60 check 5 =', S60Diagrams_5)
 
 
 def S60CheckDiagrams_6(LCB, BbyT):
@@ -431,7 +431,7 @@ def S60CheckDiagrams_6(LCB, BbyT):
 
 S60Diagrams_6 = S60CheckDiagrams_6(LCB, BbyT)
 
-print('S60 check 6 =', S60Diagrams_6)
+#print('S60 check 6 =', S60Diagrams_6)
 
 
 def S60CheckDiagrams(S60Diagrams_1, S60Diagrams_2, S60Diagrams_3, S60Diagrams_4, S60Diagrams_5, S60Diagrams_6):
@@ -456,10 +456,10 @@ def S60Check(S60Basic, S60Diagrams):
 S60 = S60Check(S60Basic, S60Diagrams)
 
 
-if S60 == True:
-    print('Using The S-60 method is acceptable')
-else:
-    print('Using The S-60 method is NOT acceptable')
+#if S60 == True:
+#    print('Using The S-60 method is acceptable')
+#else:
+#    print('Using The S-60 method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -539,7 +539,7 @@ def BSRACheckDiagrams_1(MRounded, CB):
 
 BSRADiagrams_1 = BSRACheckDiagrams_1(MRounded, CB)
 
-print('BSRA check 1 =', BSRADiagrams_1)
+#print('BSRA check 1 =', BSRADiagrams_1)
 
 
 def BSRACheckDiagrams_2(BbyT, CB):
@@ -553,7 +553,7 @@ def BSRACheckDiagrams_2(BbyT, CB):
 
 BSRADiagrams_2 = BSRACheckDiagrams_2(BbyT, CB)
 
-print('BSRA check 2 =', BSRADiagrams_2)
+#print('BSRA check 2 =', BSRADiagrams_2)
 
 
 def BSRACheckDiagrams_3(LCB, CB):
@@ -596,7 +596,7 @@ def BSRACheckDiagrams_3(LCB, CB):
 
 BSRADiagrams_3 = BSRACheckDiagrams_3(LCB, CB)
 
-print('BSRA check 3 =', BSRADiagrams_3)
+#print('BSRA check 3 =', BSRADiagrams_3)
 
 
 def BSRACheckDiagrams_4(MRounded, LCB):
@@ -663,7 +663,7 @@ def BSRACheckDiagrams_4(MRounded, LCB):
 
 BSRADiagrams_4 = BSRACheckDiagrams_4(MRounded, LCB)
 
-print('BSRA check 4 =', BSRADiagrams_4)
+#print('BSRA check 4 =', BSRADiagrams_4)
 
 
 def BSRACheckDiagrams_5(MRounded, BbyT):
@@ -700,7 +700,7 @@ def BSRACheckDiagrams_5(MRounded, BbyT):
 
 BSRADiagrams_5 = BSRACheckDiagrams_5(MRounded, BbyT)
 
-print('BSRA check 5 =', BSRADiagrams_5)
+#print('BSRA check 5 =', BSRADiagrams_5)
 
 
 def BSRACheckDiagrams_6(LCB, BbyT):
@@ -732,7 +732,7 @@ def BSRACheckDiagrams_6(LCB, BbyT):
 
 BSRADiagrams_6 = BSRACheckDiagrams_6(LCB, BbyT)
 
-print('BSRA check 6 =', BSRADiagrams_6)
+#print('BSRA check 6 =', BSRADiagrams_6)
 
 
 def BSRACheckDiagrams(BSRADiagrams_1, BSRADiagrams_2, BSRADiagrams_3, BSRADiagrams_4, BSRADiagrams_5, BSRADiagrams_6):
@@ -758,10 +758,10 @@ def BSRACheck(BSRABasic, BSRADiagrams):
 BSRA = BSRACheck(BSRABasic, BSRADiagrams)
 
 
-if BSRA == True:
-    print('Using The BSRA method is acceptable')
-else:
-    print('Using The BSRA method is NOT acceptable')
+#if BSRA == True:
+#    print('Using The BSRA method is acceptable')
+#else:
+#    print('Using The BSRA method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -788,10 +788,10 @@ def HMCheck(CP, LengthWL, Beam):
 
 HM = HMCheck(CP, LengthWL, Beam)
 
-if HM == True:
-    print('Using The Holtrop - Mennen method is acceptable')
-else:
-    print('Using The Holtrop - Mennen method is NOT acceptable')
+#if HM == True:
+#    print('Using The Holtrop - Mennen method is acceptable')
+#else:
+#    print('Using The Holtrop - Mennen method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -838,9 +838,9 @@ def HollenbachCheck(MRounded, CB, LengthWL, Beam, Draught, LengthDEP, LengthPP):
 
 Hollenbach = HollenbachCheck(MRounded, CB, LengthWL, Beam, Draught, LengthDEP, LengthPP)
 
-if Hollenbach == True:
-    print('Using The Hollenbach method is acceptable')
-else:
-    print('Using The Hollenbach method is NOT acceptable')
+#if Hollenbach == True:
+#    print('Using The Hollenbach method is acceptable')
+#else:
+#    print('Using The Hollenbach method is NOT acceptable')
 
 #print('')

@@ -204,7 +204,20 @@ CR_Cruising = 2.4938 * CRoundedCruising * LengthPP / (Volume**(1 / 3))
 
 TotalResS60Cruising = 5.045 * 10**(-3) * ((Displacement * SpeedCruisingMS**2) / LengthPP) * CR_Cruising
 
-print('Resistance at cruising speed by S-60 =', TotalResS60Cruising, '[kN]')
+#print('Resistance at cruising speed by S-60 =', TotalResS60Cruising, '[kN]')
+
+
+
+
+def EffectivePowerS60Cruising(SpeedCruisingMS, TotalResS60Cruising):
+    EffectivePowerS60Cruising = SpeedCruisingMS * TotalResS60Cruising
+    return EffectivePowerS60Cruising
+
+EffectivePowerS60Cruising = EffectivePowerS60Cruising(SpeedCruisingMS, TotalResS60Cruising)
+#print('Effective power at cruising speed by S-60 =', EffectivePowerS60Cruising, '[kW]')
+#print('')
+
+
 
 # ======================================================================================================================
 # S-60 - APPROXIMATE RESISTANCE AND POWER PREDICTION METHOD FOR A RANGE OF SPEEDS
@@ -332,7 +345,14 @@ while n < p:
 
     n += 1
 
-print('Resistance by S-60 =', TotalResS60, '[kN]')
+#print('Resistance by S-60 =', TotalResS60, '[kN]')
+
+def EffectivePowerS60(SpeedMS, TotalResS60):
+    EffectivePowerS60 = SpeedMS * TotalResS60
+    return EffectivePowerS60
+
+EffectivePowerS60 = EffectivePowerS60(SpeedMS, TotalResS60)
+#print('Effective power by S-60 =', EffectivePowerS60, '[kW]')
 
 
 #plt.plot(SpeedMS, TotalResS60)

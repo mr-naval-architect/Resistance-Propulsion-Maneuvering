@@ -260,19 +260,19 @@ elif 0.7 <= CB:
         fn30.append(float(line[12]))
     f.close()
 
-print (fn18)
-print (fn19)
-print (fn20)
-print (fn21)
-print (fn22)
-print (fn23)
-print (fn24)
-print (fn25)
-print (fn26)
-print (fn27)
-print (fn28)
-print (fn29)
-print (fn30)
+#print (fn18)
+#print (fn19)
+#print (fn20)
+#print (fn21)
+#print (fn22)
+#print (fn23)
+#print (fn24)
+#print (fn25)
+#print (fn26)
+#print (fn27)
+#print (fn28)
+#print (fn29)
+#print (fn30)
 
 
 a = list()
@@ -320,7 +320,16 @@ CorelationResSSPACruising = 0.5 * RoSalt * S * SpeedCruisingMS**2 * AppendageCoe
 
 TotalResSSPACruising = ReainingResSSPACruising + CorelationResSSPACruising + FrictionResCruising
 
-print (TotalResSSPACruising)
+#print (TotalResSSPACruising)
+
+
+def EffectivePowerSSPACruising(SpeedCruisingMS, TotalResSSPACruising):
+    EffectivePowerSSPACruising = SpeedCruisingMS * TotalResSSPACruising
+    return EffectivePowerSSPACruising
+
+EffectivePowerSSPACruising = EffectivePowerSSPACruising(SpeedCruisingMS, TotalResSSPACruising)
+#print('Effective power at cruising speed by SSPA =', EffectivePowerSSPACruising, '[kW]')
+#print('')
 
 
 # ======================================================================================================================
@@ -383,6 +392,14 @@ ReainingResSSPA = 0.5 * RoSalt * S * SpeedMS ** 2 * CR
 CorelationResSSPA = 0.5 * RoSalt * S * SpeedMS ** 2 * AppendageCoef
 
 TotalResSSPA = ReainingResSSPA + CorelationResSSPA + FrictionRes
+
+
+def EffectivePowerSSPA(SpeedMS, TotalResSSPA):
+    EffectivePowerSSPA = SpeedMS * TotalResSSPA
+    return EffectivePowerSSPA
+
+EffectivePowerSSPA = EffectivePowerSSPA(SpeedMS, TotalResSSPA)
+#print('Effective power by SSPA =', EffectivePowerSSPA, '[kW]')
 
 
 #plt.plot(SpeedMS, FrictionRes)

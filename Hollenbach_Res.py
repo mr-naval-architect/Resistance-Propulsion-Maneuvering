@@ -79,7 +79,7 @@ def RemainingResHol(a, LengthPP, CB, FroudeNoLDep, Draught, Beam, LengthDEP, Len
     return RemainingResHol
 
 RemainingResHol = RemainingResHol(a, LengthPP, CB, FroudeNoLDep, Draught, Beam, LengthDEP, LengthWL, DraughtStern, DraughtFore, D, NoRudders, NoBraces, NoBossings, NoThrusters, RoSalt, SpeedMS)
-print('Remaining resistance by Hollenbach =', RemainingResHol, '[kN]')
+#print('Remaining resistance by Hollenbach =', RemainingResHol, '[kN]')
 
 
 def RemainingResHolCruising(a, LengthPP, CB, FroudeNoLDepCruising, Draught, Beam, LengthDEP, LengthWL, DraughtStern, DraughtFore, D, NoRudders, NoBraces, NoBossings, NoThrusters, RoSalt, SpeedCruisingMS):
@@ -92,7 +92,7 @@ def RemainingResHolCruising(a, LengthPP, CB, FroudeNoLDepCruising, Draught, Beam
     return RemainingResHolCruising
 
 RemainingResHolCruising = RemainingResHolCruising(a, LengthPP, CB, FroudeNoLDepCruising, Draught, Beam, LengthDEP, LengthWL, DraughtStern, DraughtFore, D, NoRudders, NoBraces, NoBossings, NoThrusters, RoSalt, SpeedCruisingMS)
-print('Remaining resistance by Hollenbach for cruising speed =', RemainingResHolCruising, '[kN]')
+#print('Remaining resistance by Hollenbach for cruising speed =', RemainingResHolCruising, '[kN]')
 
 
 def CorelationResHol(RoSalt, S, SpeedMS, AppendageCoef):
@@ -100,7 +100,7 @@ def CorelationResHol(RoSalt, S, SpeedMS, AppendageCoef):
     return CorelationResHol
 
 CorelationResHol = CorelationResHol(RoSalt, S, SpeedMS, AppendageCoef)
-print('Corelation resistance by Hollenbach =', CorelationResHol, '[kN]')
+#print('Corelation resistance by Hollenbach =', CorelationResHol, '[kN]')
 
 
 def CorelationResHolCruising(RoSalt, S, SpeedCruisingMS, AppendageCoef):
@@ -108,7 +108,7 @@ def CorelationResHolCruising(RoSalt, S, SpeedCruisingMS, AppendageCoef):
     return CorelationResHolCruising
 
 CorelationResHolCruising = CorelationResHolCruising(RoSalt, S, SpeedCruisingMS, AppendageCoef)
-print('Corelation resistance by Hollenbach for cruising speed =', CorelationResHolCruising, '[kN]')
+#print('Corelation resistance by Hollenbach for cruising speed =', CorelationResHolCruising, '[kN]')
 
 
 def TotalResHol(RemainingResHol, FrictionRes, CorelationResHol):
@@ -116,7 +116,7 @@ def TotalResHol(RemainingResHol, FrictionRes, CorelationResHol):
     return TotalResHol
 
 TotalResHol = TotalResHol(RemainingResHol, FrictionRes, CorelationResHol)
-print('Total resistance by Hollenbach =', TotalResHol, '[kN]')
+#print('Total resistance by Hollenbach =', TotalResHol, '[kN]')
 
 
 def TotalResHolCruising(RemainingResHolCruising, FrictionResCruising, CorelationResHolCruising):
@@ -124,7 +124,7 @@ def TotalResHolCruising(RemainingResHolCruising, FrictionResCruising, Corelation
     return TotalResHolCruising
 
 TotalResHolCruising = TotalResHolCruising(RemainingResHolCruising, FrictionResCruising, CorelationResHolCruising)
-print('Total resistance by Hollenbach =', TotalResHolCruising, '[kN]')
+#print('Total resistance by Hollenbach =', TotalResHolCruising, '[kN]')
 
 
 def EffectivePowerHol(SpeedMS, TotalResHol):
@@ -132,7 +132,7 @@ def EffectivePowerHol(SpeedMS, TotalResHol):
     return EffectivePowerHol
 
 EffectivePowerHol = EffectivePowerHol(SpeedMS, TotalResHol)
-print('Effective power by GH =', EffectivePowerHol, '[kW]')
+#print('Effective power by GH =', EffectivePowerHol, '[kW]')
 
 
 def EffectivePowerHolCruising(SpeedCruisingMS, TotalResHolCruising):
@@ -140,7 +140,7 @@ def EffectivePowerHolCruising(SpeedCruisingMS, TotalResHolCruising):
     return EffectivePowerHolCruising
 
 EffectivePowerHolCruising = EffectivePowerHolCruising(SpeedCruisingMS, TotalResHolCruising)
-print('Effective power at cruising speed by GH =', EffectivePowerHolCruising, '[kW]')
+#print('Effective power at cruising speed by GH =', EffectivePowerHolCruising, '[kW]')
 
 
 #plt.plot(SpeedMS, CorelationResHol, label = "Corelation Resistance")

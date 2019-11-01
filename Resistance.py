@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from Input import SpeedMS
+from Input import SpeedCruisingMS
+
 
 from Method_Check import Taylor
 from Method_Check import LapKeller
@@ -115,12 +117,13 @@ EffectivePowerCruising = (EffectivePowerGHCruising + EffectivePowerHMCruising) /
 #plt.show()
 
 
-fig, axs = plt.subplots(3, 2, sharex = 'col', sharey = 'row')
+fig, axs = plt.subplots(3, 2, sharex = 'all', sharey = 'all')
 
 axs[0, 0].plot(SpeedMS, FrictionRes, label = "Friction Resistance")
 axs[0, 0].plot(SpeedMS, RemainingResGH, label = "Remaining Resistance")
 axs[0, 0].plot(SpeedMS, TotalResGH, 'tab:red', label = "Total Resistance")
 axs[0, 0].set_title('Guldhammer - Harvald')
+axs[0, 0].scatter(SpeedCruisingMS, TotalResGHCruising, s =10)
 plt.grid()
 #plt.legend(loc="best")
 
@@ -131,6 +134,7 @@ axs[0, 1].plot(SpeedMS, TransomResHM, label = "Transom Resistance")
 axs[0, 1].plot(SpeedMS, CorelationResHM, label = "Corelation Resistance")
 axs[0, 1].plot(SpeedMS, TotalResHM, 'tab:red', label = "Total Resistance")
 axs[0, 1].set_title('Holtrop - Mennen')
+axs[0, 1].scatter(SpeedCruisingMS, TotalResHMCruising, s =10)
 plt.grid()
 #plt.legend(loc="best")
 
@@ -139,22 +143,27 @@ axs[1, 0].plot(SpeedMS, FrictionRes, label = "Friction Resistance")
 axs[1, 0].plot(SpeedMS, RemainingResHol, label = "Remaining Resistance")
 axs[1, 0].plot(SpeedMS, TotalResHol, 'tab:red', label = "Total Resistance")
 axs[1, 0].set_title('Hollenbach')
+axs[1, 0].scatter(SpeedCruisingMS, TotalResHolCruising, s =10)
 plt.grid()
 #plt.legend(loc="best")
 
 axs[1, 1].plot(SpeedMS, TotalResS60, 'tab:red')
 axs[1, 1].set_title('S-60')
+axs[1, 1].scatter(SpeedCruisingMS, TotalResS60Cruising, s =10)
 plt.grid()
 #plt.legend(loc="best")
 
 axs[2, 0].plot(SpeedMS, TotalResSSPA, 'tab:red')
 axs[2, 0].set_title('SSPA')
+axs[2, 0].scatter(SpeedCruisingMS, TotalResSSPACruising, s =10)
 plt.grid()
 #plt.legend(loc="best")
 
 axs[2, 1].plot(SpeedMS, TotalResBSRA, 'tab:red')
-axs[2, 1].set_title('BSRA')
+axs[2, 1].plot(SpeedMS, FrictionRes, label = "Friction Resistance")
+axs[2, 1].set_title('BSRA b;a')
 plt.grid()
+axs[2, 1].scatter(SpeedCruisingMS, TotalResBSRACruising, s =10)
 #plt.legend(loc="best")
 
 

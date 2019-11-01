@@ -9,16 +9,16 @@ from Input import SpeedMS
 # AVERAGE VALUE OF THE WETTED SURFACE CALCULATED BY APROXIMATE METHODS
 # ======================================================================================================================
 
-print('')
+print('---------------------------------------------------------------------------------------------------------------')
 
 
 from Wetted_Surface import S
-print('The average value of submerged surfaces is', S, '[m^2]')
+#print('The average value of submerged surfaces is:', S, '[m^2]')
+print('The average value of submerged surfaces:')
+print('    S =', S, '[m^2]')
 
 
 print('---------------------------------------------------------------------------------------------------------------')
-print('')
-
 
 
 # ======================================================================================================================
@@ -30,9 +30,9 @@ print('')
 from Method_Check import Taylor
 
 if Taylor == True:
-    print('Using The Taylor method is acceptable')
+    print('+   Using The Taylor method is acceptable')
 else:
-    print('Using The Taylor method is NOT acceptable')
+    print('-   Using The Taylor method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -42,9 +42,9 @@ else:
 from Method_Check import LapKeller
 
 if LapKeller == True:
-    print('Using The Lap - Keller method is acceptable')
+    print('+   Using The Lap - Keller method is acceptable')
 else:
-    print('Using The Lap - Keller method is NOT acceptable')
+    print('-   Using The Lap - Keller method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -54,9 +54,9 @@ else:
 from Method_Check import SSPA
 
 if SSPA == True:
-    print('Using The SSPA method is acceptable')
+    print('+   Using The SSPA method is acceptable')
 else:
-    print('Using The SSPA method is NOT acceptable')
+    print('-   Using The SSPA method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -66,9 +66,9 @@ else:
 from Method_Check import GH
 
 if GH == True:
-    print('Using The Guldhammer - Harvald method is acceptable')
+    print('+   Using The Guldhammer - Harvald method is acceptable')
 else:
-    print('Using The Guldhammer - Harvald method is NOT acceptable')
+    print('-   Using The Guldhammer - Harvald method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -78,9 +78,9 @@ else:
 from Method_Check import S60
 
 if S60 == True:
-    print('Using The S-60 method is acceptable')
+    print('+   Using The S-60 method is acceptable')
 else:
-    print('Using The S-60 method is NOT acceptable')
+    print('-   Using The S-60 method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -90,9 +90,9 @@ else:
 from Method_Check import BSRA
 
 if BSRA == True:
-    print('Using The BSRA method is acceptable')
+    print('+   Using The BSRA method is acceptable')
 else:
-    print('Using The BSRA method is NOT acceptable')
+    print('-   Using The BSRA method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -102,9 +102,9 @@ else:
 from Method_Check import HM
 
 if HM == True:
-    print('Using The Holtrop - Mennen method is acceptable')
+    print('+   Using The Holtrop - Mennen method is acceptable')
 else:
-    print('Using The Holtrop - Mennen method is NOT acceptable')
+    print('-   Using The Holtrop - Mennen method is NOT acceptable')
 
 
 # ======================================================================================================================
@@ -114,13 +114,12 @@ else:
 from Method_Check import Hollenbach
 
 if Hollenbach == True:
-    print('Using The Hollenbach method is acceptable')
+    print('+   Using The Hollenbach method is acceptable')
 else:
-    print('Using The Hollenbach method is NOT acceptable')
+    print('-   Using The Hollenbach method is NOT acceptable')
 
 
 print('---------------------------------------------------------------------------------------------------------------')
-print('')
 
 
 # ======================================================================================================================
@@ -128,39 +127,44 @@ print('')
 # ======================================================================================================================
 
 from Friction_Res import FrictionRes
-print('Friction resistance =', FrictionRes, '[kN]')
-
-print('')
+#print('Friction resistance =', FrictionRes, '[kN]')
 
 from Friction_Res import FrictionResCruising
-print('Friction resistance for cruising speed =', FrictionResCruising, '[kN]')
+print('Friction resistance for cruising speed:')
+print('        RF =', FrictionResCruising, '[kN]')
 
 
 print('---------------------------------------------------------------------------------------------------------------')
-print('')
 
+
+# ======================================================================================================================
+# APPROXIMATE RESISTANCE AND POWER PREDICTION METHODS
+# ======================================================================================================================
+
+print('Following are the results of resistance and power prediction methods:')
 
 # ======================================================================================================================
 # GULDHAMMER - HARVALD - APPROXIMATE RESISTANCE AND POWER PREDICTION METHOD
 # ======================================================================================================================
 
 from GH_Res import TotalResGH
-print('Resistance by GH =', TotalResGH, '[kN]')
+#print('Resistance by GH =', TotalResGH, '[kN]')
 
-print('')
 
 from GH_Res import TotalResGHCruising
-print('Resistance at cruising speed by GH =', TotalResGHCruising, '[kN]')
+#print('Resistance at cruising speed by GH =', TotalResGHCruising, '[kN]')
 
-print('')
 
 from GH_Res import EffectivePowerGH
-print('Effective power by GH =', EffectivePowerGH, '[kW]')
+#print('Effective power by GH =', EffectivePowerGH, '[kW]')
 
-print('')
 
 from GH_Res import EffectivePowerGHCruising
-print('Effective power at cruising speed by GH =', EffectivePowerGHCruising, '[kW]')
+#print('Effective power at cruising speed by GH =', EffectivePowerGHCruising, '[kW]')
+
+print('    Guldhammer - Harvald:')
+print('        RT =', TotalResGHCruising, '[kN]')
+print('        PE =', EffectivePowerGHCruising, '[kW]')
 
 
 #plt.plot(SpeedMS, FrictionRes, label = "Friction Resistance")
@@ -174,8 +178,6 @@ print('Effective power at cruising speed by GH =', EffectivePowerGHCruising, '[k
 #plt.legend(loc="best")
 #plt.show()
 
-print('---------------------------------------------------------------------------------------------------------------')
-print('')
 
 
 # ======================================================================================================================
@@ -183,22 +185,23 @@ print('')
 # ======================================================================================================================
 
 from HM_Res import TotalResHM
-print('Resistance by HM =', TotalResHM, '[kN]')
+#print('Resistance by HM =', TotalResHM, '[kN]')
 
-print('')
 
 from HM_Res import TotalResHMCruising
-print('Resistance at cruising speed by HM =', TotalResHMCruising, '[kN]')
+#print('Resistance at cruising speed by HM =', TotalResHMCruising, '[kN]')
 
-print('')
 
 from HM_Res import EffectivePowerHM
-print('Effective power by HM =', EffectivePowerHM, '[kW]')
+#print('Effective power by HM =', EffectivePowerHM, '[kW]')
 
-print('')
 
 from HM_Res import EffectivePowerHMCruising
-print('Effective power at cruising speed by HM =', EffectivePowerHMCruising, '[kW]')
+#print('Effective power at cruising speed by HM =', EffectivePowerHMCruising, '[kW]')
+
+print('    Holtrom & Mennen:')
+print('        RT =', TotalResHMCruising, '[kN]')
+print('        PE =', EffectivePowerGHCruising, '[kW]')
 
 
 #plt.plot(SpeedMS, AppendageResHM, label = "Appendage Resistance")
@@ -215,21 +218,29 @@ print('Effective power at cruising speed by HM =', EffectivePowerHMCruising, '[k
 #plt.legend(loc="best")
 #plt.show()
 
-print('---------------------------------------------------------------------------------------------------------------')
-print('')
-
 
 # ======================================================================================================================
 # HOLLENBACH - APPROXIMATE RESISTANCE AND POWER PREDICTION METHOD
 # ======================================================================================================================
 
 from Hollenbach_Res import TotalResHol
-print('Total resistance by Hollenbach =', TotalResHol, '[kN]')
+#print('Total resistance by Hollenbach =', TotalResHol, '[kN]')
 
-print('')
 
 from Hollenbach_Res import TotalResHolCruising
-print('Total resistance by Hollenbach =', TotalResHolCruising, '[kN]')
+#print('Resistance at cruising speed by Hollenbach =', TotalResHolCruising, '[kN]')
+
+
+from Hollenbach_Res import EffectivePowerHol
+#print('Effective power by Hollenbach =', EffectivePowerHol, '[kW]')
+
+
+from Hollenbach_Res import EffectivePowerHolCruising
+#print('Effective power at cruising speed by Hollenbach =', EffectivePowerHolCruising, '[kW]')
+
+print('    Hollenbach:')
+print('        RT =', TotalResHolCruising, '[kN]')
+print('        PE =', EffectivePowerHolCruising, '[kW]')
 
 
 #plt.plot(SpeedMS, CorelationResHol, label = "Corelation Resistance")
@@ -244,36 +255,152 @@ print('Total resistance by Hollenbach =', TotalResHolCruising, '[kN]')
 #plt.legend(loc="best")
 #plt.show()
 
+
+# ======================================================================================================================
+# S-60 - APPROXIMATE RESISTANCE AND POWER PREDICTION METHOD
+# ======================================================================================================================
+
+from S60_Res import TotalResS60
+#print('Total resistance by S-60 =', TotalResS60, '[kN]')
+
+
+from S60_Res import TotalResS60Cruising
+#print('Resistance at cruising speed by S-60 =', TotalResS60Cruising, '[kN]')
+
+
+from S60_Res import EffectivePowerS60
+#print('Effective power by S-60 =', EffectivePowerS60, '[kW]')
+
+
+from S60_Res import EffectivePowerS60Cruising
+#print('Effective power at cruising speed by S-60 =', EffectivePowerS60Cruising, '[kW]')
+
+print('    S-60:')
+print('        RT =', TotalResS60Cruising, '[kN]')
+print('        PE =', EffectivePowerS60Cruising, '[kW]')
+
+
+#plt.plot(SpeedMS, FrictionRes, label = "Friction Resistance")
+#plt.plot(SpeedMS, RemainingResGH, label = "Remaining Resistance")
+#plt.plot(SpeedMS, TotalResGH, label = "Total Resistance")
+#plt.xticks()
+#plt.yticks()
+#plt.ylabel("Resistance R [kN]")
+#plt.xlabel("Speed V [m/s]")
+#plt.grid()
+#plt.legend(loc="best")
+#plt.show()
+
+
+# ======================================================================================================================
+# BSRA - APPROXIMATE RESISTANCE AND POWER PREDICTION METHOD
+# ======================================================================================================================
+
+from BSRA_Res import TotalResBSRA
+#print('Total resistance by BSRA =', TotalResBSRA, '[kN]')
+
+
+from BSRA_Res import TotalResBSRACruising
+#print('Resistance at cruising speed by BSRA =', TotalResBSRACruising, '[kN]')
+
+
+from BSRA_Res import EffectivePowerBSRA
+#print('Effective power by BSRA =', EffectivePowerBSRA, '[kW]')
+
+
+from BSRA_Res import EffectivePowerBSRACruising
+#print('Effective power at cruising speed by BSRA =', EffectivePowerBSRACruising, '[kW]')
+
+print('    BSRA:')
+print('        RT =', TotalResBSRACruising, '[kN]')
+print('        PE =', EffectivePowerBSRACruising, '[kW]')
+
+
+#plt.plot(SpeedMS, FrictionRes, label = "Friction Resistance")
+#plt.plot(SpeedMS, RemainingResGH, label = "Remaining Resistance")
+#plt.plot(SpeedMS, TotalResGH, label = "Total Resistance")
+#plt.xticks()
+#plt.yticks()
+#plt.ylabel("Resistance R [kN]")
+#plt.xlabel("Speed V [m/s]")
+#plt.grid()
+#plt.legend(loc="best")
+#plt.show()
+
+
+# ======================================================================================================================
+# SSPA - APPROXIMATE RESISTANCE AND POWER PREDICTION METHOD
+# ======================================================================================================================
+
+
+from SSPA_Res import TotalResSSPA
+#print('Total resistance by SSPA =', TotalResSSPA, '[kN]')
+
+
+from SSPA_Res import TotalResSSPACruising
+#print('Resistance at cruising speed by SSPA =', TotalResSSPACruising, '[kN]')
+
+
+from SSPA_Res import EffectivePowerSSPA
+#print('Effective power by SSPA =', EffectivePowerSSPA, '[kW]')
+
+
+from SSPA_Res import EffectivePowerSSPACruising
+#print('Effective power at cruising speed by SSPA =', EffectivePowerSSPACruising, '[kW]')
+
+print('    SSPA:')
+print('        RT =', TotalResSSPACruising, '[kN]')
+print('        PE =', EffectivePowerSSPACruising, '[kW]')
+
+
+#plt.plot(SpeedMS, FrictionRes, label = "Friction Resistance")
+#plt.plot(SpeedMS, RemainingResGH, label = "Remaining Resistance")
+#plt.plot(SpeedMS, TotalResGH, label = "Total Resistance")
+#plt.xticks()
+#plt.yticks()
+#plt.ylabel("Resistance R [kN]")
+#plt.xlabel("Speed V [m/s]")
+#plt.grid()
+#plt.legend(loc="best")
+#plt.show()
+
 print('---------------------------------------------------------------------------------------------------------------')
-print('')
 
 
 # ======================================================================================================================
 # CALCULATION OF THE AVERAGE OF THE TOTAL RESISTANCE AND EFFECTIVE POWER
 # ======================================================================================================================
 
-from Resistance import TotalResCruising
-print('Total resistance at cruising speed RT =', TotalResCruising, '[kN]')
+print('The average values of resistance and effective power:')
 
-print('')
+from Resistance import TotalResCruising
+#print('Total resistance at cruising speed RT =', TotalResCruising, '[kN]')
 
 from Resistance import EffectivePowerCruising
-print('Effective power at cruising speed PE =', EffectivePowerCruising, '[kW]')
+#print('Effective power at cruising speed PE =', EffectivePowerCruising, '[kW]')
+
+print('        RT =', TotalResCruising, '[kN]')
+print('        PE =', EffectivePowerCruising, '[kW]')
 
 
 print('---------------------------------------------------------------------------------------------------------------')
-print('')
 
 
 # ======================================================================================================================
 # HYDRODINAMIC COEFFICIENTS
 # ======================================================================================================================
 
+print('Hydrodinamic coefficients:')
+
+# ======================================================================================================================
+
 # WAKE FRACTION
 
 from Hydrodinamics import w
-print('The average value of wake fraction is w =', w)
-#print('')
+#print('    The average value of wake fraction is w =', w)
+
+print('    The average value of wake fraction:')
+print('        w =', w)
 
 
 # ======================================================================================================================
@@ -281,8 +408,10 @@ print('The average value of wake fraction is w =', w)
 # SPEED OF ADVANCE
 
 from Hydrodinamics import AdvanceSpeedMS
-print('Speed of advance VA =', AdvanceSpeedMS, '[m/s]')
-#print('')
+#print('    Speed of advance VA =', AdvanceSpeedMS, '[m/s]')
+
+print('    Speed of advance:')
+print('        VA =', AdvanceSpeedMS, '[m/s]')
 
 
 # ======================================================================================================================
@@ -290,8 +419,10 @@ print('Speed of advance VA =', AdvanceSpeedMS, '[m/s]')
 # THRUST DEDUCTION
 
 from Hydrodinamics import t
-print('The average value of thrust deduction is t =', t)
-#print('')
+#print('    The average value of thrust deduction is t =', t)
+
+print('    The average value of thrust deduction:')
+print('        t =', t)
 
 
 # ======================================================================================================================
@@ -299,7 +430,10 @@ print('The average value of thrust deduction is t =', t)
 # RELATIVE ROTATIVE EFFICIENCY
 
 from Hydrodinamics import EtaR
-print('Relative rotative efficiency EtaR =', EtaR)
+#print('    Relative rotative efficiency EtaR =', EtaR)
+
+print('    Relative rotative efficiency:')
+print('        EtaR =', EtaR)
 
 
 # ======================================================================================================================
@@ -307,7 +441,10 @@ print('Relative rotative efficiency EtaR =', EtaR)
 # SHAFT EFFICIENCY
 
 from Hydrodinamics import EtaS
-print('Shaft efficiency coeffiscient EtaS =', EtaS)
+#print('    Shaft efficiency coeffiscient EtaS =', EtaS)
+
+print('    Shaft efficiency coeffiscient:')
+print('        EtaS =', EtaS)
 
 
 # ======================================================================================================================
@@ -315,79 +452,101 @@ print('Shaft efficiency coeffiscient EtaS =', EtaS)
 # HULL EFFICIENCY
 
 from Hydrodinamics import EtaH
-print('Hull efficiency coeffiscient EtaH =', EtaH)
+#print('    Hull efficiency coeffiscient EtaH =', EtaH)
+
+print('    Hull efficiency coeffiscient:')
+print('        EtaH =', EtaH)
+
+print('---------------------------------------------------------------------------------------------------------------')
 
 
 # ======================================================================================================================
 # CALCULATING THE NECESSARY PROPELLER THRUST
 # ======================================================================================================================
 
+print('Propulsion characteristics:')
+
 from Hydrodinamics import EffectivePowerCruisingApp
-print('Effective power with appandages PE_App =', EffectivePowerCruisingApp, '[kW]')
+#print('Effective power with appandages PE_App =', EffectivePowerCruisingApp, '[kW]')
+
+print('    Effective power with appandages:')
+print('        PE_App =', EffectivePowerCruisingApp, '[kW]')
 
 
 from Hydrodinamics import EffectivePowerCruisingService
-print('Effective power with appandages and service margin PE_Service =', EffectivePowerCruisingService, '[kW]')
+#print('Effective power with appandages and service margin PE_Service =', EffectivePowerCruisingService, '[kW]')
+
+print('    Effective power with appandages and service margin:')
+print('        PE_Service =', EffectivePowerCruisingService, '[kW]')
 
 
 from Hydrodinamics import T
-print('Thrust that the propeller needs to develop is T =', T, '[kN]')
+#print('Thrust that the propeller needs to develop is T =', T, '[kN]')
+
+print('    Thrust that the propeller needs to develop:')
+print('        T =', T, '[kN]')
 
 
-print('')
+print('---------------------------------------------------------------------------------------------------------------')
 
 
 # ======================================================================================================================
 # CAVITATION
 # ======================================================================================================================
 
+print('Minimal ratio of AE/A0 according to cavitation reccomendations:')
+
+
 # Kellers formula
 
 from Cavitation import AEA0
-print('Minimal ratio AE/A0 according to Kellers formula is =', AEA0)
+#print('Minimal ratio AE/A0 according to Kellers formula is =', AEA0)
 
+print('    Kellers formula')
+print('        AE/A0 >', AEA0)
 
-print('')
+print('---------------------------------------------------------------------------------------------------------------')
 
 
 # ======================================================================================================================
 # ESTIMATION OF PROPELLER EFFICIENCY FOR B SERIES PROPELLER
 # ======================================================================================================================
 
+print('Propeller characteristics:')
 
 from Propulsion import PD_ideal
-print('PD_ideal =', PD_ideal)
+print('    PD_ideal =', PD_ideal)
 
 
 from Propulsion import AEA0_ideal
-print('AEA0_ideal =', AEA0_ideal)
+print('    AEA0_ideal =', AEA0_ideal)
 
 
 from Propulsion import J_ideal
-print('J_ideal =', J_ideal)
+print('    J_ideal =', J_ideal)
 
 
 from Propulsion import KT_ideal
-print('KT_ideal =', KT_ideal)
+print('    KT_ideal =', KT_ideal)
 
 
 from Propulsion import KQ_ideal
-print('KQ_ideal =', KQ_ideal)
+print('    KQ_ideal =', KQ_ideal)
 
 
 from Propulsion import Eta0_ideal
-print('Eta0_ideal =', Eta0_ideal)
+print('    Eta0_ideal =', Eta0_ideal)
 
 
 from Propulsion import n_ideal
-print('n_ideal =', n_ideal)
+print('    n_ideal =', n_ideal)
 
 
 from Propulsion import z
-print('z =', z)
+print('    z =', z)
 
 
-print('')
+print('---------------------------------------------------------------------------------------------------------------')
 
 
 # ======================================================================================================================
@@ -545,7 +704,7 @@ plt.show()
 
 
 # ======================================================================================================================
-# MY ATEMPT TO DO MANEUVERING
+# MY ATTEMPT TO DO MANEUVERING
 # ======================================================================================================================
 
 

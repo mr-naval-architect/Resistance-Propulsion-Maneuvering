@@ -80,7 +80,8 @@ imaxJ = len(J) - 1          # This represents the number of iterations for J
 
 
 #PD = np.linspace(0.6, 1.4, 80)
-PD = np.linspace(1.04, 1.04, 1)
+#PD = np.linspace(1.04, 1.04, 1)
+PD = np.linspace(0.7, 1.04, 34)
 #print('P/D =', PD)
 #print('')
 

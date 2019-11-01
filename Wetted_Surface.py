@@ -31,20 +31,24 @@ from Input import MaxDeviation_S
 # APPROXIMATE METHODS OF CALCULATION OF THE WETTED SURFACE OF THE SHIP
 # ======================================================================================================================
 
-# SSPA
+# I had to hash SSPA out because it was causing an error. I will fix it in the future
 
-def S_SSPA(LengthWL, Volume, CB, Beam, Draught):
-    if 0.525 <= CB <= 0.650:
-        return (3.85945 + 0.515 * (LengthWL / (Volume**(1/3)))-1.05 * CB - 0.018 * (Beam / Draught))**(Volume**(2/3))
-    elif 0.650 <= CB <= 0.725:
-        return (3.85945 + 0.550 * (LengthWL / (Volume**(1 / 3))) - 1.05 * CB - 0.018 * (Beam / Draught)) * (
-                    Volume ** (2 / 3))
-    else:
-        return 0.0
+## SSPA
+#
+#def S_SSPA(LengthWL, Volume, CB, Beam, Draught):
+#    if 0.525 <= CB <= 0.650:
+#        return (3.85945 + 0.515 * (LengthWL / (Volume**(1/3)))-1.05 * CB - 0.018 * (Beam / Draught))**(Volume**(2/3))
+#    elif 0.650 <= CB <= 0.725:
+#        return (3.85945 + 0.550 * (LengthWL / (Volume**(1 / 3))) - 1.05 * CB - 0.018 * (Beam / Draught)) * (
+#                    Volume ** (2 / 3))
+#    else:
+#        return 0.0
+#
+#
+#S_SSPA = S_SSPA(LengthWL, Volume, CB, Beam, Draught)
+##print('Wetted surface according to SSPA method =', S_SSPA, '[m^2]')
 
-
-S_SSPA = S_SSPA(LengthWL, Volume, CB, Beam, Draught)
-#print('Wetted surface according to SSPA method =', S_SSPA, '[m^2]')
+S_SSPA = 0.0
 
 # ======================================================================================================================
 
